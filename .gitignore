@@ -1,0 +1,17 @@
+.specmatic
+target/*
+.DS_Store
+lib/*
+*.iml
+build/*
+.idea/*
+.gradle/*
+.qontract
+js/node_modules
+kafka-logs/
+.vscode/*
+bin/*
+build/reports/specmatic/
+recordings_backup/
+repos/
+

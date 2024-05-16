@@ -1,0 +1,53 @@
+package com.component.orders.contract
+
+import com.component.orders.Application
+import `in`.specmatic.graphql.test.SpecmaticGraphQLContractTest
+import `in`.specmatic.stub.ContractStub
+import `in`.specmatic.stub.createStub
+import org.junit.jupiter.api.AfterAll
+import org.junit.jupiter.api.BeforeAll
+import org.springframework.boot.SpringApplication
+import org.springframework.context.ConfigurableApplicationContext
+
+class GraphQLContractTests : SpecmaticGraphQLContractTest {
+
+    companion object {
+        private var context: ConfigurableApplicationContext? = null
+        private var httpStub: ContractStub? = null
+        private const val APPLICATION_HOST = "localhost"
+        private const val APPLICATION_PORT = "8080"
+        private const val HTTP_STUB_HOST = "localhost"
+        private const val HTTP_STUB_PORT = 8090
+        private const val KAFKA_MOCK_HOST = "localhost"
+        private const val KAFKA_MOCK_PORT = 9092
+        private const val ACTUATOR_MAPPINGS_ENDPOINT =
+            "http://$APPLICATION_HOST:$APPLICATION_PORT/actuator/mappings"
+        private const val EXPECTED_NUMBER_OF_MESSAGES = 1
+
+        @JvmStatic
+        @BeforeAll
+        fun setUp() {
+            System.setProperty("host", APPLICATION_HOST)
+            System.setProperty("port", APPLICATION_PORT)
+//            System.setProperty("endpointsAPI", ACTUATOR_MAPPINGS_ENDPOINT)
+//            System.setProperty("SPECMATIC_GENERATIVE_TESTS", "true")
+
+            // Start Specmatic Http Stub and set the expectations
+            httpStub = createStub(listOf("./src/test/resources"), HTTP_STUB_HOST, HTTP_STUB_PORT)
+
+            // Start Springboot application
+            val springApp = SpringApplication(Application::class.java)
+            context = springApp.run()
+        }
+
+        @JvmStatic
+        @AfterAll
+        fun tearDown() {
+            // Shutdown Springboot application
+            context?.close()
+
+            // Shutdown Specmatic Http Stub
+            httpStub?.close()
+        }
+    }
+}
