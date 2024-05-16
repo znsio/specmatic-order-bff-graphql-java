@@ -11,7 +11,7 @@
     "body": [
       {
         "id": 1,
-        "name": "Iphone",
+        "name": "iPhone",
         "inventory": 10,
         "type": "gadget"
       },
@@ -23,7 +23,7 @@
       },
       {
         "id": 31,
-        "name": "Ipad",
+        "name": "iPad",
         "inventory": 20,
         "type": "gadget"
       }
