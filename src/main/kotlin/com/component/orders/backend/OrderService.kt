@@ -3,6 +3,7 @@ package com.component.orders.backend
 import com.component.orders.models.API
 import com.component.orders.models.NewProduct
 import com.component.orders.models.Product
+import org.json.JSONObject
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
@@ -36,12 +37,19 @@ class OrderService {
             apiUrl,
             API.CREATE_PRODUCTS.method,
             requestEntity,
-            Product::class.java
+            String::class.java
         )
         if (response.body == null) {
             error("No product id received in Product API response.")
         }
-        return response.body
+        val productId = JSONObject(response.body).getInt("id")
+
+        return Product(
+            id = productId,
+            name = newProduct.name,
+            type = newProduct.type,
+            inventory = newProduct.inventory ?: 0
+        )
     }
 
     private fun getHeaders(): HttpHeaders {
