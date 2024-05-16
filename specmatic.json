@@ -7,7 +7,6 @@
         "in/specmatic/examples/store/graphql/products.graphqls"
       ],
       "stub": [
-        "in/specmatic/examples/store/graphql/products.graphqls",
         "in/specmatic/examples/store/api_order_v3.yaml"
       ]
     }

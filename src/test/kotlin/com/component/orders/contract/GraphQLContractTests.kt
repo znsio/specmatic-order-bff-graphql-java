@@ -18,22 +18,15 @@ class GraphQLContractTests : SpecmaticGraphQLContractTest {
         private const val APPLICATION_PORT = "8080"
         private const val HTTP_STUB_HOST = "localhost"
         private const val HTTP_STUB_PORT = 8090
-        private const val KAFKA_MOCK_HOST = "localhost"
-        private const val KAFKA_MOCK_PORT = 9092
-        private const val ACTUATOR_MAPPINGS_ENDPOINT =
-            "http://$APPLICATION_HOST:$APPLICATION_PORT/actuator/mappings"
-        private const val EXPECTED_NUMBER_OF_MESSAGES = 1
 
         @JvmStatic
         @BeforeAll
         fun setUp() {
             System.setProperty("host", APPLICATION_HOST)
             System.setProperty("port", APPLICATION_PORT)
-//            System.setProperty("endpointsAPI", ACTUATOR_MAPPINGS_ENDPOINT)
-//            System.setProperty("SPECMATIC_GENERATIVE_TESTS", "true")
 
             // Start Specmatic Http Stub and set the expectations
-            httpStub = createStub(listOf("./src/test/resources"), HTTP_STUB_HOST, HTTP_STUB_PORT)
+            httpStub = createStub(listOf("./src/test/resources/expectations"), HTTP_STUB_HOST, HTTP_STUB_PORT)
 
             // Start Springboot application
             val springApp = SpringApplication(Application::class.java)
