@@ -54,9 +54,6 @@ dependencies {
     )
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
     testImplementation(files("lib/specmatic-graphql-0.0.1-TRIAL.jar"))
-//    implementation('in.specmatic:specmatic-graphql:0.0.1-TRIAL') {
-//        exclude group: 'com.graphql-java', module: 'graphql-java'
-//    }
 }
 
 sourceSets {
