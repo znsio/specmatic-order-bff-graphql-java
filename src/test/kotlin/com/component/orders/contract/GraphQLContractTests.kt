@@ -36,6 +36,7 @@ class GraphQLContractTests : SpecmaticGraphQLContractTest {
         @JvmStatic
         @AfterAll
         fun tearDown() {
+
             // Shutdown Springboot application
             context?.close()
 
