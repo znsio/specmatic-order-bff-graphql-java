@@ -2,9 +2,9 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id 'java'
-    id 'org.jetbrains.kotlin.jvm' version '1.9.23'
+    id 'org.jetbrains.kotlin.jvm' version '1.9.24'
     id 'org.springframework.boot' version '3.2.5'
-    id 'org.jetbrains.kotlin.plugin.spring' version '1.9.23'
+    id 'org.jetbrains.kotlin.plugin.spring' version '1.9.24'
     id 'jacoco'
 }
 
@@ -33,7 +33,7 @@ jacocoTestReport {
     }
 }
 
-def springBootVersion = '3.2.5'
+def springBootVersion = '3.3.1'
 
 dependencies {
     implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
@@ -45,7 +45,7 @@ dependencies {
     implementation "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
     implementation("com.google.code.gson:gson:2.10.1")
 
-    implementation('in.specmatic:junit5-support:1.3.20')
+    implementation('in.specmatic:junit5-support:1.3.32')
     implementation 'javax.validation:validation-api:2.0.1.Final'
     implementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
     testImplementation(
@@ -53,7 +53,7 @@ dependencies {
             'org.junit.jupiter:junit-jupiter-api:5.10.1'
     )
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.0'
-    testImplementation(files("lib/specmatic-graphql-0.0.1-TRIAL.jar"))
+    testImplementation(files("lib/specmatic-graphql-0.0.3-TRIAL.jar"))
 }
 
 sourceSets {
