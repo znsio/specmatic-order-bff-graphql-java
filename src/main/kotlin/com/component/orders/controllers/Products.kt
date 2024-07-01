@@ -13,8 +13,8 @@ import org.springframework.stereotype.Controller
 @Controller
 class Products(@Autowired val orderBFFService: OrderBFFService) {
     @QueryMapping
-    fun findAvailableProducts(@Argument type: String, @Argument pageSize: Int): List<Product> {
-        if (pageSize < 0) throw IllegalArgumentException("pageSize must be positive")
+    fun findAvailableProducts(@Argument type: String, @Argument pageSize: Int?): List<Product> {
+        if (pageSize != null && pageSize < 0) throw IllegalArgumentException("pageSize must be positive")
         return orderBFFService.findProducts(type)
     }
 
