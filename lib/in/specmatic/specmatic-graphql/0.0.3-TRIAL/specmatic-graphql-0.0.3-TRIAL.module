@@ -38,11 +38,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL.jar",
-          "size": 190159,
-          "sha512": "a4409b9d5702d61db83c9933f37cc7172c09370b4d2066cb2a6a3edc5f4d88fc0030f3b2cea4cc562139f57c90c5886fbb0c7fe35a5c64811392ecd507fd2b1f",
-          "sha256": "b83e38b6eb993aa077e3ad47289ee4c76fa0b35a9261086a3f4fcf5bd4b48213",
-          "sha1": "72d46fc4264edefbbcca0dd55ad3ba64502a6014",
-          "md5": "507128fe61caa2f5e607a8b1593af1d4"
+          "size": 191961,
+          "sha512": "ebd00396539efea7fe6d89eb468a7e22d806694603d810aa987e4d75bb0bc84417da966ec5270bec6092b379db0e200b4c09be01975d8b83c094460d633a3ab2",
+          "sha256": "b59720bd875c357a1c9a55e09d0718dce3fd0d52942ad3f9d876d9a46684b145",
+          "sha1": "19c2ab81dd08fc15cf6e51963a7eea8f99b19654",
+          "md5": "c3200c2204aeef5f1e724a5e33ab56e7"
         }
       ]
     },
@@ -62,7 +62,7 @@
           "group": "in.specmatic",
           "module": "junit5-support",
           "version": {
-            "requires": "1.3.32"
+            "requires": "1.3.33"
           }
         },
         {
@@ -147,11 +147,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL.jar",
-          "size": 190159,
-          "sha512": "a4409b9d5702d61db83c9933f37cc7172c09370b4d2066cb2a6a3edc5f4d88fc0030f3b2cea4cc562139f57c90c5886fbb0c7fe35a5c64811392ecd507fd2b1f",
-          "sha256": "b83e38b6eb993aa077e3ad47289ee4c76fa0b35a9261086a3f4fcf5bd4b48213",
-          "sha1": "72d46fc4264edefbbcca0dd55ad3ba64502a6014",
-          "md5": "507128fe61caa2f5e607a8b1593af1d4"
+          "size": 191961,
+          "sha512": "ebd00396539efea7fe6d89eb468a7e22d806694603d810aa987e4d75bb0bc84417da966ec5270bec6092b379db0e200b4c09be01975d8b83c094460d633a3ab2",
+          "sha256": "b59720bd875c357a1c9a55e09d0718dce3fd0d52942ad3f9d876d9a46684b145",
+          "sha1": "19c2ab81dd08fc15cf6e51963a7eea8f99b19654",
+          "md5": "c3200c2204aeef5f1e724a5e33ab56e7"
         }
       ]
     },
@@ -167,11 +167,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL-all.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL-all.jar",
-          "size": 53859263,
-          "sha512": "1c43b14eefa23bd5751f0d459d852ae284a5b4aa5f75448f0b7a967a5be523ab089d44506acc5a24eede84d5f4f5ae84c59a99c3c7eefd40d3362df7aa6ea505",
-          "sha256": "122cb4652607fd08e1266d1f62bf1664f5a0e4f49c24032edd446bebb52d12b9",
-          "sha1": "af156e657a17ccdc45fb704e8b36dff3518c23f4",
-          "md5": "577c07404cd20fb28549d26c879fb775"
+          "size": 53860481,
+          "sha512": "cb8df10f924624cd254d080159981b1f4ab9d806f44a4440d57918a0c47c5360d883207d198daa5b672713a88c9dab1b0b8012b024b5a5682872828111eee0e4",
+          "sha256": "442d5daa1bfa0b1c660dd7fb73657264132246bd60498aaf135baafce50266b1",
+          "sha1": "d9f21911db68ad68f1dcc8a119ccec5ba02970f3",
+          "md5": "03f6c36c052d089082e63d438c7d578f"
         }
       ]
     },
@@ -188,10 +188,10 @@
           "name": "specmatic-graphql-0.0.3-TRIAL-javadoc.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL-javadoc.jar",
           "size": 261,
-          "sha512": "17bf4bf1a2f8dddc5041c0c8a4c0019e678971fe3a9c522df923f227ec19660ed3a1d25c0639ca7436de2f1bb3c0ce10c8feff88aaf1e3dc4f8a93b95e50ba14",
-          "sha256": "f58704d80d29c4f29064019658e1e1898ba4d0af779e391df174b3837f7de07f",
-          "sha1": "b2566e4947179943d055c67a1bc4039e25a55e1b",
-          "md5": "15b6e30057b2b4964a27e0f86ee4d53c"
+          "sha512": "f0d051094d35232b74821f87f93e5f775820e33159b16df6a6dfa6b14e6ac5665673d42bb1eedd0434e83bbdfa566083344f2446216f7cf59356cfae96040d24",
+          "sha256": "3b61c4a84fb63e543a283e214c4c5280dd111f61bee072cfeb2d65c5e1d25152",
+          "sha1": "ca2046101a4a901992e550d40cfe19db886998b2",
+          "md5": "eef5621572b81d2be4b4f2a928c7c633"
         }
       ]
     },
@@ -207,11 +207,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL-sources.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL-sources.jar",
-          "size": 32890,
-          "sha512": "9d4fa110780df32b0210ced4e7b31591bbb73c811eb708b7971d4a7c029a056d71268e4a29c9351e32e0dc79112099a4b965b3c8b7ea1c8723560c7e6d807efa",
-          "sha256": "5a68bbe356953ce0b1ef6fe1279ccd14625632fabe4d7fa6364689885fbc8142",
-          "sha1": "184117472a0e24f29a34da8edd3c8f9a73d2c862",
-          "md5": "22c04492b208312936ec42401bb4adc7"
+          "size": 33282,
+          "sha512": "e941df970a7c61e337e4fb01a3f9df3f0744a9333f272a5faabc1526f11dbc49af0c09fba42c743c5969a0ac628f7a1a138e74d9543aa93ed0c790d9c9f3682d",
+          "sha256": "53f25417778e3c615578799bea7909af1f39cba74b0217011efc6440c1f03572",
+          "sha1": "52b55554ac4c49bbb559635323f6b4940c6e3942",
+          "md5": "b4877f142c541421dd2a70962305df30"
         }
       ]
     }
