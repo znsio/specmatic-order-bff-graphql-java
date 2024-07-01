@@ -38,11 +38,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL.jar",
-          "size": 191842,
-          "sha512": "bcc7976cac0d7b890fab82fe3d7b9a275a808b98b21760ffecf03ab5dfc90ad51f3d2c3ecd52fe3128d59bb453c626ee31b85bd279362d39c46f123c7c4a724c",
-          "sha256": "6a0fdf8ffd4d852f2f0e164559a25fc919d3cb6b0c39b31240730291f3ea12d4",
-          "sha1": "9ee946c634f0d771ca1a354d280948a175265ee5",
-          "md5": "d0add0343cd6051133233a9c5ab9bee7"
+          "size": 193009,
+          "sha512": "0ae18aa07110b65e08593d6c86d335bdca6048a33ad6ec92ce409c7ec9b5003988454b9a0da5d8db2f17879be57cd73ba55d22f6d8b61558a2e2fa7e212d3600",
+          "sha256": "e3e404535c5da9c93ea2889d6997dee629c16130ef2d59f2bf0d51b5b6f968b6",
+          "sha1": "750818bbe472bcecdfbed2222d0f7e4429b0cdd6",
+          "md5": "09c7402c6a3589260104aef44558f8a8"
         }
       ]
     },
@@ -147,11 +147,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL.jar",
-          "size": 191842,
-          "sha512": "bcc7976cac0d7b890fab82fe3d7b9a275a808b98b21760ffecf03ab5dfc90ad51f3d2c3ecd52fe3128d59bb453c626ee31b85bd279362d39c46f123c7c4a724c",
-          "sha256": "6a0fdf8ffd4d852f2f0e164559a25fc919d3cb6b0c39b31240730291f3ea12d4",
-          "sha1": "9ee946c634f0d771ca1a354d280948a175265ee5",
-          "md5": "d0add0343cd6051133233a9c5ab9bee7"
+          "size": 193009,
+          "sha512": "0ae18aa07110b65e08593d6c86d335bdca6048a33ad6ec92ce409c7ec9b5003988454b9a0da5d8db2f17879be57cd73ba55d22f6d8b61558a2e2fa7e212d3600",
+          "sha256": "e3e404535c5da9c93ea2889d6997dee629c16130ef2d59f2bf0d51b5b6f968b6",
+          "sha1": "750818bbe472bcecdfbed2222d0f7e4429b0cdd6",
+          "md5": "09c7402c6a3589260104aef44558f8a8"
         }
       ]
     },
@@ -167,11 +167,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL-all.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL-all.jar",
-          "size": 53860327,
-          "sha512": "102c8c99088b895e6992da0476a78c1cec0fbe2f8f12ae37f2d0b6ee4bdf7369b14c41c284e8462157c7f74d42038c1ec4bd75aebcc448db009bce736bd0b4e6",
-          "sha256": "496fd7d8e33a601890e90c3e7f3b68ceb1228f9f727850e395914020f455fa1f",
-          "sha1": "d6dc435af2cbe0589d54befc506b758cd5916f09",
-          "md5": "f64223679a8150c264f2bec51cdc1f45"
+          "size": 53861769,
+          "sha512": "26bafc4bb81e23b21463e24fc0e79d88ef92edf89250fa69fbf79a43c37a1e83e9469aeb6314ba7b7014e1232f8bdc77914227651702bf82ee8848fd690be18b",
+          "sha256": "5bafce3c88181648ed944d138463b63373e2839ef84cd62a32c0cd063684274c",
+          "sha1": "0b812aa3a492e2965d623e31e96c0c55e877eb0c",
+          "md5": "e71e9b71125afa21a6e5be06ac800298"
         }
       ]
     },
@@ -188,10 +188,10 @@
           "name": "specmatic-graphql-0.0.3-TRIAL-javadoc.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL-javadoc.jar",
           "size": 261,
-          "sha512": "6ddfd8b7ecec79fa52442b18b0ec59a061931af17177aa5cbb46be91db241c71abe2fc0dd78f0122ddfaee895a06e87d0b04bb27062a2d96e29ca9fd349b5342",
-          "sha256": "973bb86793503be064d7c7a208aa17f4ad810fd1914c1ae47c3e86c03be82c2f",
-          "sha1": "0dac41962d2f636f2cbb6c3ce59f2f36b254fc34",
-          "md5": "d0480495a6bc6bb6201c4e6e7ae2fd5c"
+          "sha512": "6a52c1081e4973652ef495c2163075aedefa199d08f1411203fc27169a1dfee91df8caae03493ad9d939927467fc192570237389f4a07edce62bc5c879a1bf63",
+          "sha256": "d0e8e5ffc5a4d565dbcbc9263d8b5c24a5da0edc35835eab7b12c20a246ec99a",
+          "sha1": "8891ef237e30d57b6fa42f3bd9546fb217c40dcd",
+          "md5": "aca5bfc2b29e04b2a1669e151de6351b"
         }
       ]
     },
@@ -207,11 +207,11 @@
         {
           "name": "specmatic-graphql-0.0.3-TRIAL-sources.jar",
           "url": "specmatic-graphql-0.0.3-TRIAL-sources.jar",
-          "size": 33227,
-          "sha512": "0f6a727b1c23e4766aedb57419395d5561a7e03a986c381f3ee92c46d7a5c3a3b49f73da819025dc46a192a92e947a834abe1a78009468457ed02da5e21e39cc",
-          "sha256": "96586de651a05c4702915f4a33c1e2d07b005341eeb6d7dafca9ec463e369a18",
-          "sha1": "5fdbf626a31225473284cc0b8ce33fc476818955",
-          "md5": "ac8f60cfd93490193c5138dfc7ef50d1"
+          "size": 33581,
+          "sha512": "adfc94cb62bc46a3b04487f6099864f4c5f4aa26e2d183e5efe2cc9bc7e9cd2d99eee2a0063c27e38a09a635fec28dd126ec463f9f9faeeddda5122db669c12d",
+          "sha256": "a8563d5e2586254cea1e79344a84dcda98f1249ff2c096f6017d2c1c39f31fd1",
+          "sha1": "6bb58abba754a9921a46f318448147d86d1e9c11",
+          "md5": "18a16aac9fcdd1804016979155c53781"
         }
       ]
     }
