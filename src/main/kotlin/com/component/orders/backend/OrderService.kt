@@ -60,7 +60,7 @@ class OrderService {
         val requestFactory = SimpleClientHttpRequestFactory()
         requestFactory.setConnectTimeout(3000)
         requestFactory.setReadTimeout(3000)
-        restTemplate.setRequestFactory(requestFactory)
+        restTemplate.requestFactory = requestFactory
         val response = restTemplate.getForEntity(apiUrl, List::class.java)
         return response.body.map {
             val product = it as Map<*, *>
