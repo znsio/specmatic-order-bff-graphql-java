@@ -3,7 +3,7 @@ package com.component.orders.backend
 import com.component.orders.models.API
 import com.component.orders.models.NewProduct
 import com.component.orders.models.Product
-import org.json.JSONObject
+import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
@@ -21,11 +21,6 @@ class OrderService {
 
     fun findProducts(type: String): List<Product> {
         val products = fetchProductsFromBackendAPI(type)
-//        val producer = getKafkaProducer()
-//        products.forEach {
-//            val productMessage = ProductMessage(it.id, it.name, it.inventory)
-//            producer.send(ProducerRecord(kafkaTopic, gson.toJson(productMessage)))
-//        }
         return products
     }
 
@@ -42,7 +37,7 @@ class OrderService {
         if (response.body == null) {
             error("No product id received in Product API response.")
         }
-        val productId = JSONObject(response.body).getInt("id")
+        val productId = ObjectMapper().readTree(response.body)["id"].asInt()
 
         return Product(
             id = productId,

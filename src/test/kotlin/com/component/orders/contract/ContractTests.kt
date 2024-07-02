@@ -1,18 +1,16 @@
 package com.component.orders.contract
 
-import com.component.orders.Application
 import `in`.specmatic.graphql.test.SpecmaticGraphQLContractTest
 import `in`.specmatic.stub.ContractStub
 import `in`.specmatic.stub.createStub
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
-import org.springframework.boot.SpringApplication
-import org.springframework.context.ConfigurableApplicationContext
+import org.springframework.boot.test.context.SpringBootTest
+import org.springframework.boot.test.context.SpringBootTest.WebEnvironment.DEFINED_PORT
 
-class GraphQLContractTests : SpecmaticGraphQLContractTest {
-
+@SpringBootTest(webEnvironment = DEFINED_PORT)
+class ContractTests : SpecmaticGraphQLContractTest {
     companion object {
-        private var context: ConfigurableApplicationContext? = null
         private var httpStub: ContractStub? = null
         private const val APPLICATION_HOST = "localhost"
         private const val APPLICATION_PORT = "8080"
@@ -29,19 +27,11 @@ class GraphQLContractTests : SpecmaticGraphQLContractTest {
             httpStub = createStub(listOf("./src/test/resources/expectations"), HTTP_STUB_HOST, HTTP_STUB_PORT)
 
             System.setProperty("SPECMATIC_GENERATIVE_TESTS", "true")
-
-            // Start Springboot application
-            val springApp = SpringApplication(Application::class.java)
-            context = springApp.run()
         }
 
         @JvmStatic
         @AfterAll
         fun tearDown() {
-
-            // Shutdown Springboot application
-            context?.close()
-
             // Shutdown Specmatic Http Stub
             httpStub?.close()
         }
