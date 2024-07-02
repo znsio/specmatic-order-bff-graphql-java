@@ -18,6 +18,8 @@ To start the server, use this command:
 
 You'll need the backend product API server running for this to work. You can get it from [here](https://github.com/znsio/specmatic-order-api-java). The README.md file in the repo contain instructions for starting up the backend API server.
 
+Visit http://localhost:8080/graphiql to access the GraphiQL interface.
+
 ### Running the contract tests
 
 Use this command to run the contract tests:
