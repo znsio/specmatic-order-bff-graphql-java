@@ -11,10 +11,18 @@ This sample project demonstrates how we can practice contract-driven development
 
 ### Starting the server
 
-To start the server, use this command:
+Run the following script on Linux:
 
-- MacOS or Windows: `./gradlew bootRun`
-- Windows: `gradlew bootRun`
+```shell
+chmod u+x gradlew
+./gradlew bootRun
+```
+
+On Windows:
+
+```commandline
+gradlew bootRun
+```
 
 You'll need the backend product API server running for this to work. You can get it from [here](https://github.com/znsio/specmatic-order-api-java). The README.md file in the repo contain instructions for starting up the backend API server.
 
@@ -27,4 +35,4 @@ Use this command to run the contract tests:
 - MacOS or Linux: `./gradlew test`
 - Windows: `gradlew test`
 
-These tests will just run, as the backend has been stubbed out using Specmatic.
+The tests stub out the backend, so
