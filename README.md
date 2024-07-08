@@ -1,3 +1,5 @@
+![Application Architecture](./Architecture.gif)
+
 # GraphQL Contract Testing Using Specmatic
 
 * [Specmatic Website](https://specmatic.in)
