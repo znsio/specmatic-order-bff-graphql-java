@@ -1,8 +1,8 @@
 package com.component.orders.contract
 
-import `in`.specmatic.graphql.test.SpecmaticGraphQLContractTest
-import `in`.specmatic.stub.ContractStub
-import `in`.specmatic.stub.createStub
+import io.specmatic.graphql.test.SpecmaticGraphQLContractTest
+import io.specmatic.stub.ContractStub
+import io.specmatic.stub.createStub
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
 import org.springframework.boot.test.context.SpringBootTest
