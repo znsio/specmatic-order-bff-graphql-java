@@ -8,6 +8,7 @@ import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.MutationMapping
 import org.springframework.graphql.data.method.annotation.QueryMapping
 import org.springframework.stereotype.Controller
+import java.util.*
 
 
 @Controller
@@ -22,4 +23,12 @@ class Products(@Autowired val orderBFFService: OrderBFFService) {
     fun createProduct(@Argument newProduct: NewProduct): Product? {
         return orderBFFService.createProduct(newProduct)
     }
+
+    @QueryMapping
+    fun getEventByDate(@Argument date: Date): Event {
+        // hardcoded id for now
+        return Event(id = "1", date = date)
+    }
 }
+
+data class Event(val id: String, val date: Date)

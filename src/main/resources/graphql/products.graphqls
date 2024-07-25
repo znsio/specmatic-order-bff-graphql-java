@@ -12,10 +12,18 @@ enum ProductType {
 
 type Query {
   findAvailableProducts(type: ProductType!, pageSize: Int): [Product]
+  getEventByDate(date: Date!): Event!
 }
 
 type Mutation {
   createProduct(newProduct: NewProductInput!): Product
+}
+
+scalar Date
+
+type Event {
+  id: String!
+  date: Date!
 }
 
 type Product {
