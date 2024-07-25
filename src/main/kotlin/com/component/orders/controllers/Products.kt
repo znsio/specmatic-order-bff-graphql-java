@@ -8,6 +8,7 @@ import org.springframework.graphql.data.method.annotation.Argument
 import org.springframework.graphql.data.method.annotation.MutationMapping
 import org.springframework.graphql.data.method.annotation.QueryMapping
 import org.springframework.stereotype.Controller
+import java.util.*
 
 
 @Controller
@@ -22,4 +23,13 @@ class Products(@Autowired val orderBFFService: OrderBFFService) {
     fun createProduct(@Argument newProduct: NewProduct): Product? {
         return orderBFFService.createProduct(newProduct)
     }
+
+    @QueryMapping
+    fun getDispatchedProductByDate(@Argument date: Date): DispatchedProduct {
+        // Note - For now using randomId for demo purposes
+        val randomId = UUID.randomUUID().toString()
+        return DispatchedProduct(id = randomId, dispatchDate = date)
+    }
 }
+
+data class DispatchedProduct(val id: String, val dispatchDate: Date)
