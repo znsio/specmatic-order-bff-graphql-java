@@ -1,7 +1,10 @@
 package com.component.orders.backend
+
 import com.component.orders.models.Offer
 import org.springframework.stereotype.Service
 import java.text.SimpleDateFormat
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import java.util.Date
 
 @Service
@@ -10,19 +13,23 @@ class OfferService {
     private val offers = listOf(
         Offer(
             offerCode = "OFF50",
-            validUntil = SimpleDateFormat("yyyy/mm/dd").parse("2024/12/31")
+            validUntil = formattedFutureDate(3)
         ),
         Offer(
             offerCode = "SUMMER21",
-            validUntil = SimpleDateFormat("yyyy/mm/dd").parse("2024/08/31")
+            validUntil = formattedFutureDate(6)
         ),
         Offer(
             offerCode = "NEWYEAR25",
-            validUntil = SimpleDateFormat("yyyy/mm/dd").parse("2025/01/01")
+            validUntil = formattedFutureDate(9)
         )
     )
 
     fun findOfferForDate(date: Date): List<Offer> {
         return offers.filter { it.validUntil >= date }
     }
+
+    private fun formattedFutureDate(monthsFromNow: Long): Date = SimpleDateFormat("yyyy/mm/dd").parse(
+        LocalDate.now().plusMonths(monthsFromNow).format(DateTimeFormatter.ofPattern("yyyy/MM/dd"))
+    )
 }
