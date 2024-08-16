@@ -12,7 +12,7 @@ enum ProductType {
 
 type Query {
   findAvailableProducts(type: ProductType!, pageSize: Int): [Product]
-  getDispatchedProductByDate(date: Date!): DispatchedProduct!
+  findOffersForDate(date: Date!): [Offer]!
 }
 
 type Mutation {
@@ -21,9 +21,9 @@ type Mutation {
 
 scalar Date
 
-type DispatchedProduct {
-  id: String!
-  dispatchDate: Date!
+type Offer {
+  offerCode: String!
+  validUntil: Date!
 }
 
 type Product {

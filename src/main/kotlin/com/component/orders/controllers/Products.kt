@@ -1,6 +1,8 @@
 package com.component.orders.controllers
 
+import com.component.orders.backend.OfferService
 import com.component.orders.models.NewProduct
+import com.component.orders.models.Offer
 import com.component.orders.models.Product
 import com.component.orders.services.OrderBFFService
 import org.springframework.beans.factory.annotation.Autowired
@@ -12,7 +14,10 @@ import java.util.*
 
 
 @Controller
-class Products(@Autowired val orderBFFService: OrderBFFService) {
+class Products(
+    @Autowired val orderBFFService: OrderBFFService,
+    @Autowired val offerService: OfferService
+) {
     @QueryMapping
     fun findAvailableProducts(@Argument type: String, @Argument pageSize: Int?): List<Product> {
         if (pageSize != null && pageSize < 0) throw IllegalArgumentException("pageSize must be positive")
@@ -25,11 +30,8 @@ class Products(@Autowired val orderBFFService: OrderBFFService) {
     }
 
     @QueryMapping
-    fun getDispatchedProductByDate(@Argument date: Date): DispatchedProduct {
-        // Note - For now using randomId for demo purposes
-        val randomId = UUID.randomUUID().toString()
-        return DispatchedProduct(id = randomId, dispatchDate = date)
+    fun findOffersForDate(@Argument date: Date): List<Offer> {
+        return offerService.findOfferForDate(date)
     }
 }
 
-data class DispatchedProduct(val id: String, val dispatchDate: Date)
