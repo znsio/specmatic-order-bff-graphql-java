@@ -26,11 +26,26 @@ You'll need the backend product API server running for this to work. You can get
 
 Visit http://localhost:8080/graphiql to access the GraphiQL interface.
 
-### Running the contract tests
+### Running the contract tests using Docker
 
-Use this command to run the contract tests:
+1. Start the Specmatic http stub server to emulate domain service:
 
-- MacOS or Linux: `./gradlew test`
-- Windows: `gradlew test`
+   ```shell
+   docker run --network host -v "$(pwd)/specmatic.yml:/usr/src/app/specmatic.yml" znsio/specmatic virtualize --port=8090
+   ```
 
-The tests stub out the backend, so
+2. Build and run the BFF service (System Under Test) in a Docker container:
+
+   ```shell
+   docker build --no-cache -t specmatic-order-bff-graphql .
+   ```
+
+   ```shell
+   docker run -p 8080:8080 specmatic-order-bff-graphql
+   ```
+
+3. Finally, run Specmatic Contract on the BFF service (System Under Test):
+
+   ```shell
+   docker run --network host -v "$(pwd)/specmatic.yml:/usr/src/app/specmatic.yml" -e SPECMATIC_GENERATIVE_TESTS=true znsio/specmatic-graphql-trial test --port=8080
+   ```
