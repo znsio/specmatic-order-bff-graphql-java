@@ -32,8 +32,8 @@ dependencies {
     implementation 'javax.validation:validation-api:2.0.1.Final'
 
     testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.0'
 
     testImplementation 'io.specmatic:junit5-support:2.0.16'
     testImplementation "io.specmatic:specmatic-graphql:1.0.5-TRIAL"
