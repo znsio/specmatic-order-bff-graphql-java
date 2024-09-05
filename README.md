@@ -44,6 +44,8 @@ Visit http://localhost:8080/graphiql to access the GraphiQL interface.
    docker run -p 8080:8080 specmatic-order-bff-graphql
    ```
 
+   OR, you can run the application locally with `./gradlew bootRun`
+
 3. Finally, run Specmatic Contract on the BFF service (System Under Test):
 
    ```shell
