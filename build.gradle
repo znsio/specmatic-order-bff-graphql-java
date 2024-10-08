@@ -36,7 +36,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
 
     testImplementation 'io.specmatic:junit5-support:2.0.16'
-    testImplementation "io.specmatic:specmatic-graphql:1.0.5-TRIAL"
+    testImplementation "io.specmatic:specmatic-graphql:1.0.7-TRIAL"
 }
 
 sourceSets {
