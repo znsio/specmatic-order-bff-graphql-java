@@ -10,9 +10,8 @@ repositories {
     maven {
         url uri('lib')
     }
-    maven {
-        url = 'https://repo.maven.apache.org/maven2'
-    }
+    mavenLocal()
+    mavenCentral()
 }
 
 jacocoTestReport {
@@ -22,31 +21,19 @@ jacocoTestReport {
     }
 }
 
-def springBootVersion = '3.3.1'
-
 dependencies {
-    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    implementation "org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}"
-    implementation "org.springframework.boot:spring-boot-starter-graphql:${springBootVersion}"
-    implementation 'org.jetbrains.kotlin:kotlin-reflect'
+    implementation "org.springframework.boot:spring-boot-starter-web:3.4.4"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:3.4.4"
+    implementation "org.springframework.boot:spring-boot-starter-graphql:3.4.4"
+    implementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.24'
     implementation 'javax.validation:validation-api:2.0.1.Final'
 
-    testImplementation "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    testImplementation "org.springframework.boot:spring-boot-starter-test:3.4.4"
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
 
-    testImplementation 'io.specmatic:junit5-support:2.0.16'
-    testImplementation "io.specmatic:specmatic-graphql:1.0.14"
-}
-
-sourceSets {
-    test {
-        resources {
-            srcDir file('src/test/kotlin')
-            exclude '**/*.java'
-            exclude '**/*.kt}'
-        }
-    }
+    testImplementation "io.specmatic:junit5-support:${specmaticVersion}"
+    testImplementation "io.specmatic.graphql:specmatic-graphql-min:${specmaticGraphqlVersion}"
 }
 
 test {
@@ -66,7 +53,8 @@ test {
 
             println separator
             println resultLine
-            println separator        }
+            println separator
+        }
     }
 }
 
