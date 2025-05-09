@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>io.specmatic.graphql</groupId>
+  <artifactId>specmatic-graphql</artifactId>
+  <versioning>
+    <lastUpdated>20250509105953</lastUpdated>
+    <snapshot>
+      <timestamp>20250509.105953</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>1.0.17-20250509.105953-1</value>
+        <updated>20250509105953</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.17-20250509.105953-1</value>
+        <updated>20250509105953</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+  <version>1.0.17-SNAPSHOT</version>
+</metadata>
