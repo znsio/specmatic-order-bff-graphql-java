@@ -10,9 +10,8 @@ repositories {
     maven {
         url uri('lib')
     }
-    maven {
-        url = 'https://repo.maven.apache.org/maven2'
-    }
+    mavenCentral()
+    mavenLocal()
 }
 
 jacocoTestReport {
@@ -35,8 +34,8 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.1'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
 
-    testImplementation 'io.specmatic:junit5-support:2.0.16'
-    testImplementation "io.specmatic:specmatic-graphql:1.0.4-TRIAL"
+    testImplementation 'io.specmatic:specmatic-core:2.11.2-SNAPSHOT'
+    testImplementation "io.specmatic.graphql:specmatic-graphql:1.0.17"
 }
 
 sourceSets {
