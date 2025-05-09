@@ -31,7 +31,7 @@ Visit http://localhost:8080/graphiql to access the GraphiQL interface.
 1. Start the Specmatic http stub server to emulate domain service:
 
    ```shell
-   docker run --network host -v "$(pwd)/specmatic.yml:/usr/src/app/specmatic.yml" znsio/specmatic virtualize --port=8090
+      docker run --network host -p 8090:8090 -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" znsio/specmatic virtualize --port=8090
    ```
 
 2. Build and run the BFF service (System Under Test) in a Docker container:
@@ -44,8 +44,10 @@ Visit http://localhost:8080/graphiql to access the GraphiQL interface.
    docker run -p 8080:8080 specmatic-order-bff-graphql
    ```
 
+   OR, you can run the application locally with `./gradlew bootRun`
+
 3. Finally, run Specmatic Contract on the BFF service (System Under Test):
 
    ```shell
-   docker run --network host -v "$(pwd)/specmatic.yml:/usr/src/app/specmatic.yml" -e SPECMATIC_GENERATIVE_TESTS=true znsio/specmatic-graphql-trial test --port=8080
+   docker run --network host -v "$(pwd)/specmatic.yaml:/usr/src/app/specmatic.yaml" -v "$(pwd)/build/reports/specmatic:/usr/src/app/build/reports/specmatic"  -e SPECMATIC_GENERATIVE_TESTS=true znsio/specmatic-graphql test --port=8080 --host=host.docker.internal
    ```

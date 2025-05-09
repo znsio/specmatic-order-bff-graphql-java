@@ -1,5 +1,6 @@
 package com.component.orders.contract
 
+import io.specmatic.graphql.VersionInfo.describe
 import io.specmatic.graphql.test.SpecmaticGraphQLContractTest
 import io.specmatic.stub.ContractStub
 import io.specmatic.stub.createStub
@@ -20,6 +21,7 @@ class ContractTests : SpecmaticGraphQLContractTest {
         @JvmStatic
         @BeforeAll
         fun setUp() {
+            println("Testing using Specmatic GraphQL " + describe())
             System.setProperty("host", APPLICATION_HOST)
             System.setProperty("port", APPLICATION_PORT)
 
