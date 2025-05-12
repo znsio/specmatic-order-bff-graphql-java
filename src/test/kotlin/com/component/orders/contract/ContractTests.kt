@@ -27,8 +27,6 @@ class ContractTests : SpecmaticGraphQLContractTest {
 
             // Start Specmatic Http Stub and set the expectations
             httpStub = createStub(listOf("./src/test/resources/expectations"), HTTP_STUB_HOST, HTTP_STUB_PORT)
-
-            System.setProperty("SPECMATIC_GENERATIVE_TESTS", "true")
         }
 
         @JvmStatic
